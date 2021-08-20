@@ -328,8 +328,7 @@ reverse_source_word_index=x_tokenizer.index_word
 target_word_index=y_tokenizer.word_index
 
 # Encode the input sequence to get the feature vector
-encoder_model = Model(inputs=encoder_inputs,outputs=[encoder_outputs, encoder_states])
-# encoder_model = Model(inputs=encoder_inputs,outputs=[encoder_outputs, state_h, state_c])
+encoder_model = Model(inputs=encoder_inputs,outputs=[encoder_outputs, state_h, state_c])
 
 # Decoder setup
 # Below tensors will hold the states of the previous time step
